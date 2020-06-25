@@ -2,8 +2,3 @@
   display: flex;
   padding-bottom: 100px;
 }
-.img-item{
-  margin: auto;
-  width: 20rem;
-  filter: drop-shadow(0 -6mm 3mm rgb(63, 57, 65));
-}

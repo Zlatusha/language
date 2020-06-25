@@ -1,0 +1,30 @@
+.img-item {
+  position: relative;
+  margin: auto;
+  user-select: none;
+}
+
+.image {
+  margin: auto;
+  width: 20rem;
+  filter: drop-shadow(-5px -3mm 3mm rgb(63, 57, 65));
+  z-index: -1;
+}
+
+.img-text {
+  font-size: 3.8rem;
+  font-weight: bold;
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 30px;
+  width: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  word-break: break-all;
+  /* border-radius: 25% 5% 0% 0%; */
+}

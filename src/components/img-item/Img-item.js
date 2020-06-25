@@ -2,22 +2,24 @@ import React from 'react';
 import './Img-item.css';
 import { motion } from 'framer-motion';
 
-const ImgItem = ({imgItem: {label, src_img}}) => {
-  
+const ImgItem = ({ imgItem: { label, src_img } }) => {
+
 
   return (
-    <div className="img-item">
-      <span>{label}</span>
-      <motion.img
-        initial={{ y: -200 }}
-        animate={{ y: 0 }}
-        transition={{ type: 'spring' }}
-        whileHover={{ scale: 1.06 }}
-        whileTap={{ scale: 0.5 }}
+    <motion.div
+      initial={{ y: -200 }}
+      animate={{ y: 0 }}
+      transition={{ type: 'spring' }}
+      whileHover={{ scale: 1.06 }}
+      whileTap={{ scale: 0.5 }}
+      className="img-item">
+      <span className="img-text">{label}</span>
+      <img
+
         src={src_img}
         className="image"
       />
-    </div>
+    </motion.div>
   )
 
 }
