@@ -1,3 +1,13 @@
-.dropdown{
-  height: 150px;
+.drop-down{
+  margin-bottom: 10rem;
+  margin-top: 1rem;
+}
+
+.drop-down-item{
+  display: flex;
+  align-items: center
+}
+
+.drop-down-item img{
+  margin-right: 1rem;
 }

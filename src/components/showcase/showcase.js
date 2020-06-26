@@ -4,31 +4,37 @@ import skyscraper from '../../img/skyscraper.png';
 import oles from '../../img/oles.png';
 import { motion } from 'framer-motion';
 import './showcase.css';
-import ImgItem from '../img-item'
+import ImgItem from '../img-item';
 
 
-const Showcase = (props) => {
+
+const Showcase = ({language}) => {
+  
   const [itemCards, setItemCards] = useState([
     {
       id: 1,
-      label: 'Калужа',
+      label: 'puddle',
       src_img: puddle,
+      initial: -200,
     },
     {
       id: 2,
-      label: 'Олэксiй',
+      label: 'oles',
       src_img: oles,
+      initial: 200,
     },
     {
       id: 3,
-      label: 'Хмарочос',
+      label: 'skyscraper',
       src_img: skyscraper,
+      initial: -200,
     },
   ]);
+
   return (
     <div className="showcase">
       {itemCards.map(imgItem => (
-        <ImgItem key={imgItem.id} imgItem={imgItem} />
+        <ImgItem key={imgItem.id} imgItem={{...imgItem, label:language[imgItem.label]}} />
       ))}
     </div>
   )

@@ -1,18 +1,19 @@
 .img-item {
   position: relative;
-  margin: auto;
+  margin: 0 30px;
   user-select: none;
+  cursor: pointer;
 }
 
 .image {
   margin: auto;
-  width: 20rem;
-  filter: drop-shadow(-5px -3mm 3mm rgb(63, 57, 65));
+  width: 19rem;
+  filter: drop-shadow(-3px -2mm 3mm rgb(63, 57, 65));
   z-index: -1;
 }
 
 .img-text {
-  font-size: 3.8rem;
+  font-size: 3.3rem;
   font-weight: bold;
   z-index: 1;
   display: flex;
@@ -26,5 +27,5 @@
   align-items: center;
   justify-content: center;
   word-break: break-all;
-  /* border-radius: 25% 5% 0% 0%; */
+  
 }

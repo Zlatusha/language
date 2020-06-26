@@ -2,17 +2,23 @@ import React from 'react';
 import './Img-item.css';
 import { motion } from 'framer-motion';
 
-const ImgItem = ({ imgItem: { label, src_img } }) => {
-
+const ImgItem = ({ imgItem: { label, src_img, initial } }) => {
+  const voiceLabel = () => {
+    if (!window.speechSynthesis) { return; }
+    var utterance = new SpeechSynthesisUtterance(label);
+    utterance.lang = "ru-RU";
+    window.speechSynthesis.speak(utterance);
+  }
 
   return (
     <motion.div
-      initial={{ y: -200 }}
+      initial={{ y: initial }}
       animate={{ y: 0 }}
       transition={{ type: 'spring' }}
-      whileHover={{ scale: 1.06 }}
-      whileTap={{ scale: 0.5 }}
-      className="img-item">
+      whileHover={{ scale: 1.01 }}
+      whileTap={{ scale: 0.9 }}
+      className="img-item"
+      onClick={voiceLabel}>
       <span className="img-text">{label}</span>
       <img
 

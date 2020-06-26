@@ -1,17 +1,20 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Showcase from './components/showcase';
-import Dropdown from './components/dropdown'
+import Dropdown from './components/dropdown';
+import { rus } from './components/showcase/translator';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="container">
-        <Dropdown />
-        <Showcase />
-      </div>
-    );
-  }
+
+const App = () => {
+
+  const [language, setLanguage] = useState(rus)
+  return (
+    <div className="container">
+      <Dropdown setLanguage={setLanguage}/>
+      <Showcase language={language}/>
+    </div>
+  );
+
 }
 
 export default App;
