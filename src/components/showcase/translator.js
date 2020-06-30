@@ -5,7 +5,7 @@ export const rus = {
 }
 
 export const ua = {
-  puddle: "Калужа",
+  puddle: "Калюжа",
   oles: "Олексiй",
   skyscraper: "Хмарочос"
 }
